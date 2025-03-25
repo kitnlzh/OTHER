@@ -2,10 +2,32 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>My First Site</title>
+  <title>パスワード保護サイト</title>
+  <style>
+    #content { display: none; }
+  </style>
 </head>
 <body>
-  <h1>こんにちは！</h1>
-  <p>自分のサイトへようこそ！</p>
+  <h2>パスワードを入力してください</h2>
+  <input type="password" id="password" placeholder="パスワードを入力" />
+  <button onclick="checkPassword()">送信</button>
+
+  <div id="content">
+    <h1>ようこそ！</h1>
+    <p>これはパスワード保護されたコンテンツです。</p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const correctPassword = "pass1234"; // 🔑ここで好きなパスワードを設定
+      const userInput = document.getElementById("password").value;
+
+      if (userInput === correctPassword) {
+        document.getElementById("content").style.display = "block";
+      } else {
+        alert("パスワードが間違っています");
+      }
+    }
+  </script>
 </body>
 </html>
