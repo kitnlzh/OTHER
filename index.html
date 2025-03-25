@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <title>パスワード保護サイト</title>
+  <meta charset="UTF-8">
+  <title>ファイル一覧ページ</title>
   <style>
-    #content { display: none; }
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 10px 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <h2>パスワードを入力してください</h2>
-  <input type="password" id="password" placeholder="パスワードを入力" />
-  <button onclick="checkPassword()">送信</button>
-
-  <div id="content">
-    <h1>ようこそ！</h1>
-    <p>これはパスワード保護されたコンテンツです。</p>
-  </div>
-
-  <script>
-    function checkPassword() {
-      const correctPassword = "@kit02721"; // 🔑ここで好きなパスワードを設定
-      const userInput = document.getElementById("password").value;
-
-      if (userInput === correctPassword) {
-        document.getElementById("content").style.display = "block";
-      } else {
-        alert("パスワードが間違っています");
-      }
-    }
-  </script>
+  <h1>ファイル一覧</h1>
+  <ul>
+    <li><a href="sample1.pdf" target="_blank">📄 sample1.pdf</a></li>
+    <li><a href="document.docx" target="_blank">📝 document.docx</a></li>
+    <li><a href="archive.zip" download>📦 archive.zip（ダウンロード）</a></li>
+  </ul>
 </body>
 </html>
