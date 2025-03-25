@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ファイル一覧ページ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>リンク集</title>
   <style>
     body {
       font-family: sans-serif;
-      max-width: 600px;
-      margin: 40px auto;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 2rem;
     }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
     ul {
       list-style-type: none;
-      padding-left: 0;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
     }
+
     li {
-      margin: 10px 0;
+      margin: 1rem 0;
     }
+
     a {
-      color: #0066cc;
       text-decoration: none;
+      color: #0066cc;
+      font-size: 1.2rem;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <h1>ファイル一覧</h1>
+  <h1>リンク集</h1>
   <ul>
-    <li><a href="sample1.pdf" target="_blank">📄 sample1.pdf</a></li>
-    <li><a href="document.docx" target="_blank">📝 document.docx</a></li>
-    <li><a href="archive.zip" download>📦 archive.zip（ダウンロード）</a></li>
+    <li><a href="https://github.com/kitnlzh" target="_blank">git</a></li>
+    <li><a href="https://kitnlzh.github.io/BMSthinker/" target="_blank">BMSthinker</a></li>
+    <!-- ここに自由に追加 -->
   </ul>
+
+  <p class="note">※リンクは新しいタブで開きます。</p>
 </body>
 </html>
